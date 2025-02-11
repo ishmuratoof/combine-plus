@@ -1,24 +1,25 @@
 // swift-tools-version: 6.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "combine-plus",
+    platforms: [
+        .iOS(.v15),
+        .macOS(.v13),
+        .tvOS(.v13),
+        .watchOS(.v10),
+        .visionOS(.v1)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "combine-plus",
-            targets: ["combine-plus"]),
+            name: "CombinePlus",
+            targets: ["CombinePlus"]
+        ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "combine-plus"),
-        .testTarget(
-            name: "combine-plusTests",
-            dependencies: ["combine-plus"]
-        ),
+            name: "CombinePlus"
+        )
     ]
 )
