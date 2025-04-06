@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "combine-plus",
     platforms: [
-        .iOS(.v15),
+        .iOS(.v14),
         .macOS(.v13),
         .tvOS(.v13),
         .watchOS(.v10),
